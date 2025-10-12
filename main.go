@@ -2,7 +2,7 @@ package main
 
 import (
   "log"
-	"fmt"
+  "fmt"
   "runtime/debug"
 )
 
@@ -58,7 +58,5 @@ func main() {
       log.Println("Finally\n")
     },
   }.Handle()
-
-
   
 }
