@@ -6,6 +6,10 @@ import (
   "runtime/debug"
 )
 
+func init(){
+  debug.SetPanicOnFault(true)
+}
+
 type Panic struct{
   Recover any
   Message string
