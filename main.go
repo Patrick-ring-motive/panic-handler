@@ -30,10 +30,10 @@ func (p PanicHandler)Handle(){
   if p.Try == nil{
     panic("Try should not be nil")
   }
+  debug.SetPanicOnFault(true)
   if p.Finally != nil{
     defer p.Finally()
   }
-
   if p.Catch != nil{
     defer func(){
       if r := recover(); r != nil{
